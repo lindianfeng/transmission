@@ -35,6 +35,7 @@ target_link_libraries(${TR_NAME}-daemon
         ${TR_NAME}
         libevent::event
         fmt::fmt-header-only
+	jemalloc
         $<$<BOOL:${WITH_SYSTEMD}>:${SYSTEMD_LIBRARIES}>)
 
 tr_win32_app_info(${TR_NAME}-daemon
